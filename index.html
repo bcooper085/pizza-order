@@ -10,29 +10,43 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <form id="order-form-size">
-          <h5 class="pizzaSize">Please choose your Pizza Size:</h5>
-          <input type="radio" id="smallPizza" name="pizzaSize" value="10">Small $10<br>
-          <input type="radio" id="mediumPizza" name="pizzaSize" value="13">Medium $13<br>
-          <input type="radio" id="largePizza" name="pizzaSize" value="15">Large $15
-        </form>
-        <form id="order-form-toppings">
-          <h5 class="pizzaToppings">Please chooseyour Pizza Toppings:</h5>
-          <div class="meats">
-            <input type="checkbox" name="pizzaToppings" value="1">Pepperoni
-            <input type="checkbox" name="pizzaToppings" value="1">Sausage
-            <input type="checkbox" name="pizzaToppings" value="1">Meatball
-            <input type="checkbox" name="pizzaToppings" value="1">Bacon
-            <input type="checkbox" name="pizzaToppings" value="1">Ham
+        <div class="row">
+          <div class="col-md-4">
+            <form id="order-form-size">
+              <h4 class="pizzaSize">Please choose your Pizza Size:</h4>
+              <input type="radio" id="smallPizza" name="pizzaSize"value="10">Small $10<br>
+              <input type="radio" id="mediumPizza" name="pizzaSize" value="13">Medium $13<br>
+              <input type="radio" id="largePizza" name="pizzaSize" value="15">Large $15
+            </form>
           </div>
-          <div class="veggies">
-            <input type="checkbox" name="pizzaToppings" value="1">Roasted Tomatoes
-            <input type="checkbox" name="pizzaToppings" value="1">Mushroom
-            <input type="checkbox" name="pizzaToppings" value="1">Olives
-            <input type="checkbox" name="pizzaToppings" value="1">Green Bell Peppers
-            <input type="checkbox" name="pizzaToppings" value="1">Red Onions
+          <div class="col-md-6">
+            <form id="order-form-toppings">
+              <h4 class="pizzaToppings">Please chooseyour Pizza Toppings:</h4>
+              <div class="meats">
+                <h5>Meats</h5>
+                <input type="checkbox" name="pizzaToppings" value="Pepperoni">Pepperoni
+                <input type="checkbox" name="pizzaToppings" value="Sausage">Sausage
+                <input type="checkbox" name="pizzaToppings" value="Meatball">Meatball
+                <input type="checkbox" name="pizzaToppings" value="Bacon">Bacon
+                <input type="checkbox" name="pizzaToppings" value="Ham">Ham
+              </div>
+              <div class="veggies">
+                <h5>Veggies</h5>
+                <input type="checkbox" name="pizzaToppings" value="Roasted Tomatoes">Roasted Tomatoes
+                <input type="checkbox" name="pizzaToppings" value="Mushroom">Mushroom
+                <input type="checkbox" name="pizzaToppings" value="Olives">Olives
+                <input type="checkbox" name="pizzaToppings" value="Green Bell Pepper">Green Bell Peppers
+                <input type="checkbox" name="pizzaToppings" value="Red Onion">Red Onions
+              </div>
+              <button type="submit" name="add-pizza">Add Pizza!</button>
+            </form>
           </div>
-        </form>
+        </div>
+      </div>
+      <div class="row">
+        <div id="output-order">
+
+        </div>
       </div>
     </div>
   </body>
