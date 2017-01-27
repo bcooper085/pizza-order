@@ -3,6 +3,8 @@ function Pizza(size) {
   this.pizzaSize = size;
   this.pizzaToppings = [];
 }
+
+
 Pizza.prototype.price = function() {
   var price = 0;
   if (this.pizzaSize === "Small") {
@@ -38,5 +40,8 @@ $(function() {
       $("input[type=checkbox]").prop("checked", false);
     });
     $('#output-order').append('<li>' + newPizza.order() + " " + newPizza.price() + '</li>');
+  $('#remove-button').click(function() {
+    $('ol').empty();
+  })
   });
 });
