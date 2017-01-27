@@ -15,11 +15,14 @@ Pizza.prototype.price = function() {
   for (var i = 0; i < this.pizzaToppings.length; i++) {
     price++;
   }
+  price = "$" + price.toFixed(2);
   return price;
+
 }
 Pizza.prototype.order = function() {
   return (this.pizzaSize + " " + this.pizzaToppings.join(', '));
 }
+
 
 //User Logic
 $(function() {
@@ -33,7 +36,6 @@ $(function() {
       $("input[type=radio]").prop("checked", false);
       $("input[type=checkbox]").prop("checked", false);
     });
-    var orderCost = newPizza.price();
-    $('#output-order').append('<li>' + newPizza.order() + " " + orderCost + '</li>');
+    $('#output-order').append('<li>' + newPizza.order() + " " + newPizza.price() + '</li>');
   });
 });
