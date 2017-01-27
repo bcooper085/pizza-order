@@ -19,17 +19,17 @@ var toppingCost = function(toppings) {
 
 //User Logic
 $(function() {
-  $('#order-form-toppings').submit(function() {
+  $('.order-form').submit(function() {
     event.preventDefault();
     var inputtedSize = $('input[name=pizzaSize]:checked').val();
     var inputtedToppings = $('input[name=pizzaToppings]:checked').val();
-
     var newPizza = new Pizza(inputtedSize, inputtedToppings);
 
-    $('#output-order').append(newPizza.order());
+    $('#output-order').text(newPizza.order());
 
-    $('input[name=pizzaSize]').removeAttr('checked');
-    $('input[name=pizzaToppings]').removeAttr('checked');
+    // $('form#order-form-toppings').removeAttr('checked');
+    // $('input[name="pizzaToppings"]:checked').removeAttr('checked');
+
 
   });
 });
