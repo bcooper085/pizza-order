@@ -34,6 +34,6 @@ $(function() {
       $("input[type=checkbox]").prop("checked", false);
     });
     var orderCost = newPizza.price();
-    $('#output-order').text(newPizza.order() + " " + orderCost);
+    $('#output-order').append('<li>' + newPizza.order() + " " + orderCost + '</li>');
   });
 });
