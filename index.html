@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="container">
+    <p class="logo"><img src="img/pizzaLogo.jpg" alt="pizza logo"></p>
     <div class="jumbotron">
       <div class="row">
         <form class="order-form">
@@ -19,7 +20,7 @@
             <input type="radio" id="largePizza" name="pizzaSize" value="Large">Large $15
           </div>
           <div class="col-md-6">
-            <h4 class="pizzaToppings">Please chooseyour Pizza Toppings:</h4>
+            <h4 class="pizzaToppings">Please choose your Pizza Toppings $1:</h4>
             <div class="meats">
               <h5>Meats</h5>
               <input type="checkbox" name="pizzaToppings" value="Pepperoni">Pepperoni
@@ -44,9 +45,13 @@
       </div>
     </div>
     <div class="row">
-      <ol id="output-order">
-
-      </ol>
+      <div class="col-md-5">
+        <ol id="output-order">
+        </ol>
+      </div>
+      <div class="col-md-5">
+        <span class="pizza-here"><img src="img/pizza1.jpg" alt="cheese pizza"></span>
+      </div>
     </div>
   </div>
 </body>

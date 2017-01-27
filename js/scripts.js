@@ -28,6 +28,7 @@ Pizza.prototype.order = function() {
 $(function() {
   $('.order-form').submit(function() {
     event.preventDefault();
+    $('.pizza-here').fadeIn(5000);
     var inputtedSize = $('input[name=pizzaSize]:checked').val();
     var newPizza = new Pizza(inputtedSize);
     $('input[name=pizzaToppings]:checked').each(function() {
