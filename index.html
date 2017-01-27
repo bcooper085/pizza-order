@@ -11,8 +11,8 @@
   <div class="container">
     <div class="jumbotron">
       <div class="row">
-        <div class="col-md-4">
-          <form class="order-form">
+        <form class="order-form">
+          <div class="col-md-4">
             <h4 class="pizzaSize">Please choose your Pizza Size:</h4>
             <input type="radio" id="smallPizza" name="pizzaSize"value="Small" required>Small $10<br>
             <input type="radio" id="mediumPizza" name="pizzaSize" value="Medium">Medium $13<br>
@@ -36,9 +36,11 @@
               <input type="checkbox" name="pizzaToppings" value="Green Bell Pepper">Green Bell Peppers
               <input type="checkbox" name="pizzaToppings" value="Red Onion">Red Onions
             </div>
+          </div>
+          <div class="col-md-2">
             <button type="submit" name="add-pizza">Add Pizza!</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="row">
