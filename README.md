@@ -8,11 +8,11 @@
 * App will create a pizza object.
 * App will have pizza object constructor for pizza size and toppings.
 * App will allow user to select from different size pizza.
-* App will charge according to pizza size selected.
+* App will charge according to pizza size selected. **Input:** Medium **Output:** $15
 * App will have an array of pizza toppings.
 * App will allow user to add toppings to pizza.
-* App will charge for each additional topping.
-* App will store custom pizza size and toppings and total cost.
+* App will charge $1.50 for each additional topping. **Input:** Pepperoni, Sausage **Output:** $3.00
+* App will store custom pizza size and toppings and total cost.  **Input:** Medium 2 toppings. **Output:** $18
 
 ## Setup
 
