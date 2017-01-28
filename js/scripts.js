@@ -3,8 +3,6 @@ function Pizza(size) {
   this.pizzaSize = size;
   this.pizzaToppings = [];
 }
-
-
 Pizza.prototype.price = function() {
   var price = 0;
   if (this.pizzaSize === "Small") {
@@ -19,13 +17,10 @@ Pizza.prototype.price = function() {
   }
   price = "$" + price.toFixed(2);
   return price;
-
 }
 Pizza.prototype.order = function() {
   return (this.pizzaSize + " " + this.pizzaToppings.join(', '));
 }
-
-
 //User Logic
 $(function() {
   $('.order-form').submit(function() {
@@ -40,8 +35,8 @@ $(function() {
       $("input[type=checkbox]").prop("checked", false);
     });
     $('#output-order').append('<li>' + newPizza.order() + " " + newPizza.price() + '</li>');
+  });
   $('#remove-button').click(function() {
-    $('ol').empty();
-  })
+    $('#output-order li:last').remove();
   });
 });
