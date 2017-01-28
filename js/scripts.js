@@ -5,7 +5,6 @@ function Pizza(size) {
   this.pizzaSize = size;
   this.pizzaToppings = [];
 }
-
 Pizza.prototype.price = function() {
   var price = 0;
   if (this.pizzaSize === "Small") {
@@ -18,9 +17,7 @@ Pizza.prototype.price = function() {
   for (var i = 0; i < this.pizzaToppings.length; i++) {
     price++;
   }
-  // price = "$" + price.toFixed(2);
   return price;
-
 }
 Pizza.prototype.order = function() {
   return (this.pizzaSize + " " + this.pizzaToppings.join(', '));
@@ -28,23 +25,23 @@ Pizza.prototype.order = function() {
 
 //User Logic
 $(function() {
-
   $('.order-form').submit(function() {
     event.preventDefault();
     $('.pizza-here').fadeIn(5000);
+    $('.col-md-3').fadeIn(5000);
     var inputtedSize = $('input[name=pizzaSize]:checked').val();
     var newPizza = new Pizza(inputtedSize);
     $('input[name=pizzaToppings]:checked').each(function() {
-      var inputtedToppings = $(this).val();
-      newPizza.pizzaToppings.push(inputtedToppings);
-      $("input[type=radio]").prop("checked", false);
-      $("input[type=checkbox]").prop("checked", false);
+      newPizza.pizzaToppings.push($(this).val());
     });
     orderTotal += newPizza.price();
     $('#output-order').append('<li>' + newPizza.order() + " " + "$" + newPizza.price() + '</li>');
     $('.order-total').text("$" + orderTotal);
+    $("input[type=radio]").prop("checked", false);
+    $("input[type=checkbox]").prop("checked", false);
   });
   $('#remove-button').click(function() {
     $('#output-order li:last').remove();
+    $('.order-total').text(" ");
   });
 });
